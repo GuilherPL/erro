@@ -5,14 +5,14 @@ class ControleRemoto(ABC):
     def ligar(self):
         pass
 
-@abstractmethod
-def desligar(self):
-    pass
+    @abstractmethod
+    def desligar(self):
+        pass
 
-@property
-@abstractproperty
-def marca(self):
-    pass
+    @property
+    @abstractproperty
+    def marca(self):
+        pass
 
 
 class ControleTV(ControleRemoto):
@@ -20,26 +20,26 @@ class ControleTV(ControleRemoto):
         print("Ligando a TV...")
         print("Ligada!")
 
-def desligar(self):
-    print("Desligando a Tv...")
-    print("Desligada!")
+    def desligar(self):
+        print("Desligando a Tv...")
+        print("Desligada!")
 
-@property
-def marca(self):
-    return "Philco"
+    @property
+    def marca(self):
+        return "Philco"
 
 class ControleArCondicionado(ControleRemoto):
     def ligar(self):
         print("Ligando o Ar Condicionado...")
         print("Ligado!")
 
-def desligar(self):
-    print("Desligando o Ar Condicionado...")
-    print("Desligado!")
+    def desligar(self):
+        print("Desligando o Ar Condicionado...")
+        print("Desligado!")
 
-@property
-def marca(self):
-    return "LG"
+    @property
+    def marca(self):
+        return "LG"
 
 controle = ControleTV()
 controle.ligar()
